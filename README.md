@@ -1,37 +1,84 @@
-Smart Timetable
+# Smart Timetable Scheduler
 
-A Flutter-based Smart Timetable app for admins and lecturers, designed to simplify class scheduling through automation and cloud-based management.
+A **Flutter-based Smart Timetable Application** designed to automate academic scheduling for institutions.  
+The system allows **administrators and lecturers** to manage and generate class timetables efficiently using a **Genetic Algorithm** for optimized scheduling.
 
-Features
+The application integrates **Firebase Authentication** and **Cloud Firestore** for secure login and real-time data management.
 
-- Role-based Login System (Admin & Lecturer access)
-- Automated Timetable Generation using Genetic Algorithm
-- Firebase Authentication for secure login
-- Cloud Firestore integration for dynamic timetable data
-- Cross-platform Support: Android, iOS, Web, Desktop
-- Modern UI using Flutter and Dart
+---
 
-Tech Stack
+# Project Overview
 
-Technology        - Usage
-Flutter & Dart    - Frontend & UI logic
-Firebase Auth     - Login & Role management
-Cloud Firestore   - Database for timetable data
-Genetic Algorithm - Smart, conflict-free scheduling
-GitHub Actions    - CI/CD setup for Firebase hosting
+Managing academic timetables manually can lead to scheduling conflicts, inefficient classroom allocation, and time-consuming administrative work.
 
-Getting Started
+This project provides a **smart scheduling solution** that automatically generates optimized timetables while avoiding conflicts between:
 
-To run the app locally:
+- lecturers
+- classrooms
+- subjects
+- time slots
 
-git clone https://github.com/asinantony/smart_timetable.git
-cd smart_timetable
-flutter pub get
-flutter run
+The system is built using **Flutter for cross-platform support**, allowing deployment on **Android, iOS, Web, and Desktop**.
 
-Make sure to add your Firebase config files:
-- android/app/google-services.json
-- ios/Runner/GoogleService-Info.plist
+---
+
+# Key Features
+
+### Role-Based Login System
+- Separate access for **Admin** and **Lecturer**
+- Secure authentication using Firebase
+
+### Automated Timetable Generation
+- Uses a **Genetic Algorithm** to generate conflict-free timetables
+- Optimizes scheduling across multiple constraints
+
+### Cloud-Based Data Management
+- All timetable data stored in **Firebase Cloud Firestore**
+- Enables real-time updates
+
+### Cross Platform Application
+The application runs on:
+
+- Android
+- iOS
+- Web
+- Windows
+- macOS
+- Linux
+
+### Modern User Interface
+- Built using **Flutter and Dart**
+- Responsive UI for multiple devices
+
+---
+
+# Tech Stack
+
+| Technology | Usage |
+|-------------|------|
+| Flutter | Cross-platform UI framework |
+| Dart | Application logic |
+| Firebase Authentication | User login & role management |
+| Cloud Firestore | Cloud database |
+| Genetic Algorithm | Automated timetable generation |
+| GitHub Actions | CI/CD workflow for deployment |
+
+---
+
+# System Architecture
+
+The application consists of three main layers:
+
+### Frontend
+Flutter-based UI handling user interactions and displaying timetable data.
+
+### Backend Services
+Firebase Authentication for user login and Firestore database for storing timetable information.
+
+### Scheduling Engine
+Genetic Algorithm used to generate optimized timetables based on constraints.
+
+---
 
 Screenshots
 
@@ -45,23 +92,84 @@ Screenshots
 <img width="544" height="249" alt="image" src="https://github.com/user-attachments/assets/42fcb313-861a-429d-a80b-c5071e029fe7" />
 
 
-Folder Structure Overview
+# Project Structure
 
-smart_timetable/
-├── android/           → Android-specific code
-├── ios/               → iOS-specific code
-├── lib/               → Main Flutter app code
-├── functions/         → Optional: Firebase Cloud Functions
-├── .github/workflows/ → GitHub Actions CI/CD workflow
+```
+smart-timetable-scheduler
+│
+├── android/                 # Android platform code
+├── ios/                     # iOS platform code
+├── web/                     # Web platform code
+├── windows/                 # Windows platform code
+├── macos/                   # macOS platform code
+├── linux/                   # Linux platform code
+│
+├── lib/                     # Main Flutter application code
+├── functions/               # Firebase cloud functions
+│
+├── images/                  # Screenshots for README
+│
+├── firebase.json            # Firebase configuration
+├── firestore.rules          # Firestore security rules
+├── pubspec.yaml             # Flutter dependencies
+└── README.md
+```
 
-Notes
+---
 
-- The Firebase deploy workflow was disabled due to missing secret credentials.
-- You can re-enable it by adding your service account key to GitHub Secrets.
+# Installation Guide
 
-Author
+### 1 Clone the Repository
 
-Asin Fraisiya  
-BCA in Data Analytics   
-LinkedIn: www.linkedin.com/in/asin-fraisiya-v-a-36694427a 
-Email: vasins2005@gmail.com
+```
+git clone https://github.com/asinantony/smart_timetable.git
+cd smart_timetable
+```
+
+### 2 Install Dependencies
+
+```
+flutter pub get
+```
+
+### 3 Add Firebase Configuration Files
+
+Add your Firebase configuration files:
+
+```
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+```
+
+### 4 Run the Application
+
+```
+flutter run
+```
+
+---
+
+# Future Improvements
+
+Potential improvements for this project include:
+
+- AI-based timetable optimization
+- Classroom availability prediction
+- Lecturer workload balancing
+- Interactive timetable dashboard
+- Notification system for schedule updates
+
+---
+
+# Author
+
+**Asin Fraisiya**
+
+BCA – Data Analytics  
+Aspiring Data Analyst | Data Visualization | Python | Power BI
+
+LinkedIn  
+https://www.linkedin.com/in/asin-fraisiya-v-a-36694427a
+
+GitHub  
+https://github.com/asinantony
